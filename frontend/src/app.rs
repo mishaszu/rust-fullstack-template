@@ -21,7 +21,18 @@ impl Component for App {
     }
     fn view(&self) -> Html {
         html! {
-            <h1>{ "Hello World 2!" }</h1>
+            <div class="main">
+                <div class="app">
+                <h1>{"Fullstack with Yew"}</h1>
+                    <div>
+                        <button>{"Route 1"}</button>
+                        <button>{"Route 2"}</button>
+                    </div>
+                    <div class="routes">
+                        <p>{"routes"}</p>
+                    </div>
+                </div>
+            </div>
         }
     }
 }

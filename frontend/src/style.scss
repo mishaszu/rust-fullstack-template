@@ -1,5 +1,50 @@
 $background: white;
 
+html, body, header, main, footer, div, p, span, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, .main {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
 body {
   background: $background;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 40px;
+}
+
+button {
+  border-radius: 12px;
+  cursor: pointer;
+  height: 45px;
+  margin: 20px;
+  width: 130px;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  align-items: center;
+  box-shadow: 10px 13px 13px -7px rgba(173,132,173,1);
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  min-width: 400px;
+  width: 40%;
+}
+
+.routes {
+  margin: 30px;
+  font-size: 1.3em;
 }

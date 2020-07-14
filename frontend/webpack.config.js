@@ -3,7 +3,6 @@ const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const distPath = path.resolve(__dirname, "public");
 module.exports = (env, argv) => {
   let distPath = path.resolve(__dirname, "../backend/static");
   if (argv.workspace && argv.workspace == "true") {
