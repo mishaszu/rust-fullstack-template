@@ -2,6 +2,7 @@
 
 mod app;
 mod route1;
+mod route2;
 
 use wasm_bindgen::prelude::*;
 

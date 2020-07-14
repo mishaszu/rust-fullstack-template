@@ -22,7 +22,7 @@ impl Component for Route1 {
 
     fn view(&self) -> Html {
         html! {
-            <h1>{"Test"}</h1>
+            <h2>{"Route 1"}</h2>
         }
     }
 }
