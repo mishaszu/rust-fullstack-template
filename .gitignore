@@ -1,8 +1,10 @@
+backend/static
 target
+
 node_modules
 pkg
-backend/static
-**/*.rs.bk
-bin/
-pkg/
 wasm-pack.log
+public
+
+bin/
+**/*.rs.bk

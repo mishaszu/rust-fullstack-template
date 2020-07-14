@@ -3,7 +3,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
-    "build": "webpack --mode production",
+    "build:workspace": "webpack --mode production --workspace true",
+    "build:backend": "webpack --mode production --workspace false",
     "start": "webpack-dev-server --mode development"
   },
   "devDependencies": {

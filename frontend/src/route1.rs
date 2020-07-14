@@ -8,5 +8,21 @@ impl Component for Route1 {
     type Message = ();
     type Properties = ();
 
-    fn create
+    fn create(props: Self::Properties, link: ComponentLink<Self>) -> Self {
+        Route1 { link }
+    }
+
+    fn update(&mut self, msg: Self::Message) -> ShouldRender {
+        false
+    }
+
+    fn change(&mut self, _props: Self::Properties) -> ShouldRender {
+        false
+    }
+
+    fn view(&self) -> Html {
+        html! {
+            <h1>{"Test"}</h1>
+        }
+    }
 }
