@@ -1,18 +1,18 @@
 use yew::prelude::*;
 
 pub struct Route1 {
-    link: ComponentLink<Self>,
+    _link: ComponentLink<Self>,
 }
 
 impl Component for Route1 {
     type Message = ();
     type Properties = ();
 
-    fn create(props: Self::Properties, link: ComponentLink<Self>) -> Self {
-        Route1 { link }
+    fn create(_props: Self::Properties, _link: ComponentLink<Self>) -> Self {
+        Route1 { _link }
     }
 
-    fn update(&mut self, msg: Self::Message) -> ShouldRender {
+    fn update(&mut self, _msg: Self::Message) -> ShouldRender {
         false
     }
 

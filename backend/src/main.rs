@@ -1,6 +1,6 @@
 use actix_files::Files;
 use actix_web::http::StatusCode;
-use actix_web::{get, http, web, App, HttpResponse, HttpServer, Responder, Result};
+use actix_web::{get, web, App, HttpResponse, HttpServer, Result};
 use api::Hello;
 use serde_json;
 use std::env;

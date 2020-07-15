@@ -26,7 +26,7 @@ impl Component for App {
     type Message = Msg;
     type Properties = ();
 
-    fn create(props: Self::Properties, link: ComponentLink<Self>) -> Self {
+    fn create(_props: Self::Properties, link: ComponentLink<Self>) -> Self {
         let route_service = RouteAgentDispatcher::new();
         Self {
             link,

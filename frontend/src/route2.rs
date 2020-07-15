@@ -16,23 +16,23 @@ pub enum Msg {
 }
 
 pub struct Route2 {
-    link: ComponentLink<Self>,
+    _link: ComponentLink<Self>,
     text: String,
     data: Option<Hello>,
-    ft: FetchTask,
+    _ft: FetchTask,
 }
 
 impl Component for Route2 {
     type Message = Msg;
     type Properties = Props;
 
-    fn create(props: Self::Properties, link: ComponentLink<Self>) -> Self {
-        let task = Route2::fetch_data(&link);
+    fn create(props: Self::Properties, _link: ComponentLink<Self>) -> Self {
+        let task = Route2::fetch_data(&_link);
         Route2 {
-            link,
+            _link,
             text: props.text,
             data: None,
-            ft: task,
+            _ft: task,
         }
     }
 
