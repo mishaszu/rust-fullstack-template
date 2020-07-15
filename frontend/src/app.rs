@@ -35,7 +35,7 @@ impl Component for App {
     }
     fn update(&mut self, msg: Self::Message) -> ShouldRender {
         match msg {
-            Msg::ChangeRoute(route) => &self
+            Msg::ChangeRoute(route) => self
                 .route_service
                 .send(RouteRequest::ChangeRoute(Route::from(route))),
         };

@@ -12,13 +12,18 @@ module.exports = (env, argv) => {
     devServer: {
       contentBase: distPath,
       compress: argv.mode === 'production',
-      port: 8000
+      port: 8000,
+      proxy: {
+        '/api': 'http://localhost:8081'
+      },
+      historyApiFallback: true
     },
     entry: './index.js',
     output: {
       path: distPath,
-      filename: "app.js",
-      webassemblyModuleFilename: "app.wasm"
+      filename: 'app.js',
+      webassemblyModuleFilename: 'app.wasm',
+      publicPath: '/'
     },
     module: {
       rules: [
