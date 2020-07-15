@@ -30,6 +30,11 @@ or prod's set up to run it from backend folder.*
 [actix-web examples](https://github.com/actix/examples)
 
 ### Yew
+**Remember to install Frontend packages first!**
+```sh
+cd frontend && npm install
+```
+
 Features in the template:
 - handles two simple routes
 - passing simple props
@@ -51,6 +56,10 @@ To get request backend server has to be turned on.*
 ---
 ## How :blue_book: :satellite:
 You can manually run all commands with `cargo run` or `cargo run -p project_name` for BE and `npm start` etc for FE, or you can use `run.sh` the file that provides all commands:
+Remember to install Frontend packages with npm first (you should do this only once):
+```sh
+cd frontend && npm install
+```
 
 
 Run Frontend in developer mode. The frontend will be served by webpack and proxied to `actix-web` server.
