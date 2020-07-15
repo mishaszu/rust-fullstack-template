@@ -4,13 +4,13 @@
 
 **Frontend: yew**
 
-## Generate
+## Generate :sparkler: :sparkler: :floppy_disk:
 You can use [cargo generate tool](https://crates.io/crates/cargo-generate) to generate this template as your workspace:
 ```sh
 cargo generate --git https://github.com/mishaszu/rust-fullstack-template.git --branch main
 ```
 ---
-## What
+## What :green_book: :mega:
 This template is an easy way to start developing production-level applications with `actix-web` & `yew`.
 ### Actix-web
 Features in the template:
@@ -47,7 +47,7 @@ To get request backend server has to be turned on.*
 [yew examples](https://github.com/yewstack/yew/tree/v0.17/examples)
 [yew router examples](https://github.com/yewstack/yew/tree/v0.17/yew-router/examples)
 ---
-## How
+## How :blue_book: :satellite:
 You can manually run all commands with `cargo run` or `cargo run -p project_name` for BE and `npm start` etc for FE, or you can use `run.sh` the file that provides all commands:
 
 
