@@ -1,3 +1,5 @@
+![Rust](https://github.com/mishaszu/rust-fullstack-template/workflows/Rust/badge.svg)
+
 # Rust Fullstack Template :electric_plug: :battery:
 
 **Backend: actix-web**
