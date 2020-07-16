@@ -19,6 +19,7 @@ Features in the template:
 - serving static files
 - support simple get route
 - share API with Frontend
+- serve Frontend as SPA
 
 **Port: 8081**
 
