@@ -55,8 +55,10 @@ To get request backend server has to be turned on.*
 
 ---
 ## How :blue_book: :satellite:
-You can manually run all commands with `cargo run` or `cargo run -p project_name` for BE and `npm start` etc for FE, or you can use `run.sh` the file that provides all commands:
-Remember to install Frontend packages with npm first (you should do this only once):
+You can manually run all commands with `cargo run` or `cargo run -p project_name` for BE and `npm start` etc for FE, or you can use `run.sh` the file that provides all commands.
+
+Remember to install Frontend packages with npm first (you should do this only once).
+
 ```sh
 cd frontend && npm install
 ```
