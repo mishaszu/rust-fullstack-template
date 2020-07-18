@@ -11,5 +11,5 @@ pub async fn index() -> Result<HttpResponse> {
 }
 
 pub fn route1_routes(config: &mut web::ServiceConfig) {
-    config.service(web::scope("/ask").service(index));
+    config.service(web::scope("/test").service(index));
 }
