@@ -1,17 +1,8 @@
 use actix_files;
-use actix_web::http::StatusCode;
-use actix_web::{get, middleware, web, App, HttpResponse, HttpServer, Result};
-use api::Hello;
-use serde_json;
+use actix_web::{middleware, web, App, HttpServer, Result};
 use std::env;
-
-#[get("/api/hello")]
-pub async fn hello() -> Result<HttpResponse> {
-    let data = Hello::new("Hello from server");
-    Ok(HttpResponse::build(StatusCode::OK)
-        .content_type("application/json; charset=utf-8")
-        .body(serde_json::to_value(data).unwrap()))
-}
+mod route1;
+mod route2;
 
 pub async fn index() -> Result<actix_files::NamedFile> {
     Ok(actix_files::NamedFile::open("./static/index.html")?)
@@ -27,7 +18,8 @@ async fn main() -> std::io::Result<()> {
     HttpServer::new(move || {
         App::new()
             .wrap(middleware::Logger::default())
-            .service(hello)
+            .configure(route1::route1_routes)
+            .configure(route2::route2_routes)
             .service(
                 actix_files::Files::new("/", static_path)
                     .index_file("index.html")
