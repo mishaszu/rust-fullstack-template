@@ -3,7 +3,6 @@ use actix_web::{get, web, HttpResponse, Result};
 use api::Hello;
 
 pub async fn hello() -> Result<HttpResponse> {
-    println!("hit");
     let data = Hello::new("Hello from server");
     Ok(HttpResponse::build(StatusCode::OK)
         .content_type("application/json; charset=utf-8")
