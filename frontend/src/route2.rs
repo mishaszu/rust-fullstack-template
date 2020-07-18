@@ -1,9 +1,10 @@
 use anyhow::Error;
 use api::Hello;
+use helpers::Fetcher;
 use log::{error, info};
-use yew::format::{Json, Nothing};
+use yew::format::Json;
 use yew::prelude::*;
-use yew::services::fetch::{FetchService, FetchTask, Request, Response};
+use yew::services::fetch::{FetchTask, Response};
 
 #[derive(Properties, PartialEq, Clone)]
 pub struct Props {
@@ -27,7 +28,7 @@ impl Component for Route2 {
     type Properties = Props;
 
     fn create(props: Self::Properties, _link: ComponentLink<Self>) -> Self {
-        let task = Route2::fetch_data(&_link);
+        let task = Fetcher::build_get("/api/hello", Self::hello_callback(&_link));
         Route2 {
             _link,
             text: props.text,
@@ -67,8 +68,10 @@ impl Component for Route2 {
 }
 
 impl Route2 {
-    fn fetch_data(link: &ComponentLink<Self>) -> FetchTask {
-        let callback = link.callback(move |response: Response<Json<Result<Hello, Error>>>| {
+    fn hello_callback(
+        link: &ComponentLink<Self>,
+    ) -> Callback<Response<Json<Result<Hello, Error>>>> {
+        link.callback(move |response: Response<Json<Result<Hello, Error>>>| {
             let (meta, Json(data)) = response.into_parts();
             info!("META: {:?}, {:?}", meta, data);
             if meta.status.is_success() {
@@ -76,8 +79,6 @@ impl Route2 {
             } else {
                 Msg::Ignore
             }
-        });
-        let request = Request::get("/api/hello").body(Nothing).unwrap();
-        FetchService::fetch(request, callback).unwrap()
+        })
     }
 }

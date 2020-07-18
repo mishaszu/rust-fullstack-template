@@ -2,5 +2,6 @@
 members = [
   "backend",
   "frontend",
-  "api"
+  "api",
+  "helpers"
 ]
