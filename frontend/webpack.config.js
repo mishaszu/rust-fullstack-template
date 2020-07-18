@@ -14,7 +14,8 @@ module.exports = (env, argv) => {
       compress: argv.mode === 'production',
       port: 8000,
       proxy: {
-        '/api': 'http://localhost:8081'
+        '/api': 'http://localhost:8081',
+        '/test': 'http://localhost:8081'
       },
       historyApiFallback: true
     },
