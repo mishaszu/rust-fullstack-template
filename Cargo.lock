@@ -631,6 +631,7 @@ dependencies = [
  "anyhow",
  "api",
  "log",
+ "serde",
  "wasm-bindgen",
  "wasm-bindgen-test",
  "wasm-logger",
